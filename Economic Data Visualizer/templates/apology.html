@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Apology
+{% endblock %}
+
+{% block main %}
+
+    <div class="content">
+        <h1>Error {{ code }}</h1>
+        <p>{{ message }}</p>
+        <div class="alert alert-success" role="alert">
+            Return to <a href="/" class="alert-link">the homepage</a> here.
+        </div>
+    </div>
+
+{% endblock %}

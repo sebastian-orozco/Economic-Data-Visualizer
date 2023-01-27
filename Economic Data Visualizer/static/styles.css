@@ -1,0 +1,214 @@
+/* set custom colours */
+:root {
+    --teal: #009688;
+    --dark_gray: #444645;
+    --light_gray: #ddd;
+  }
+
+/* universal word style formatting. CSS universal tag used. */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+
+/* set banner background */
+.banner {
+    width: 100%;
+    height: 100vh;
+    background: black;
+    background-image: url("background.jpg"); /* fallback */
+    background: linear-gradient(
+                to bottom,
+                rgba(0,0,0, 0),
+                rgba(0,0,0, 100)),
+                url("background.jpg"); /*gradient + image */
+    background-size: cover;
+    background-position: center;
+}
+
+/* configure navigation bar */
+.navbar {
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* configure items in navbar */
+.navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+/* configure colour of navbar items */
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+}
+
+/* add left-to-right hover to navbar items when clicked */
+/* nothing before */
+.navbar ul li::after {
+    content: '';
+    height: 3px;
+    width: 0;
+    background: var(--teal);
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+/* show when hovering */
+.navbar ul li:hover::after {
+    width: 100%;
+}
+
+/* set logo size */
+.logo {
+    height: 100px;
+    cursor: pointer;
+}
+
+/* set content layout */
+.content {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); /* centre vertically */
+    text-align: center;
+    color: white;
+}
+
+/* set content header font size */
+.content h1 {
+    font-size: 70px;
+    margin-top: 80px;
+    font-weight: bold;
+}
+
+/* set content standard font size */
+.content p {
+    margin: 24px auto;
+    font-weight: 100;
+    line-height: 24px;
+    padding: 0.5rem 2rem 1rem 2rem;
+}
+
+/* configure button */
+button {
+    width: 250px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 18px 12px;
+    border-radius: 24px;
+    font-weight: bold;
+    border: 2px solid var(--teal);
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+/* add hover to button */
+span {
+    background: var(--teal);
+    height: 100%;
+    width: 0;
+    border-radius: 24px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1; /* show words by sending back layer */
+    transition: 0.5s;
+}
+button:hover span{
+    width: 100%;
+}
+button: hover{
+    border: none;
+}
+
+/* configure select */
+select {
+    width: 800px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 18px 12px;
+    border-radius: 24px;
+    font-weight: bold;
+    border: 2px solid var(--teal);
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+/* configure select option */
+select option {
+    margin: 40px;
+    background: black;
+    color: white;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+}
+/* add hover to select */
+select:hover {
+    color: var(--dark_gray);
+    background: var(--light_gray);
+    }
+
+/* configure display for graph */
+.display {
+    border-top: 15px solid var(--teal);
+    border-bottom: 15px solid var(--teal);
+    width: 100%;
+    position: absolute;
+    top: 80%;
+    transform: translateY(-50%); /* centre vertically */
+    text-align: center;
+    color: white;
+    background-color: black;
+}
+
+/* standard padding where necessary */
+.padding {
+    padding-top:50px;
+}
+
+/* standard section */
+.section {
+    padding: 0.5rem 2rem 1rem 2rem;
+}
+
+/* bootstrap alert */
+.alert {
+    width: 85%;
+    margin: 120px;
+}
+
+/* bio headline */
+.bio_header {
+    text-align: center;
+    color: white;
+}
+
+/* configure box */
+.box {
+    float: left;
+    width: 33.3333%;
+    background-color: black;
+    text-align: center;
+    color: white;
+}
+
+/* configure bio picture */
+.bio {
+    height: 300px;
+}
